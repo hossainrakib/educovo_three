@@ -1,0 +1,99 @@
+.courses-area{
+    .courses{
+        &__item{
+            padding: 30px;
+            border: 1px solid $border-color;
+
+            @include respond-between(md, lg) {
+                padding: 30px 20px;
+            }
+            @include respond-between(sm, md) {
+              
+            }
+            @include respond-between(xs, sm) {
+              
+            }
+            @include respond-below(xs) {
+              padding: 25px 20px;
+            }
+            
+        }
+        &__image{
+            img{
+
+            }
+        }
+        &__content{
+
+        }
+        .meta-part{
+            margin: 30px 0 17px 0;
+            li{
+                margin-right: 10px;
+                span.price{
+                    font-weight: 500;
+                    color: $white-color;
+                    background-color: $main-color;
+                    padding: 3px 20px;
+                    display: inline-block;
+
+                }
+                a.categories{
+                    color: $para-color;
+                }
+            }
+        }
+        &__title{
+            h2{
+                @include font($second-font, 24, 700);
+                line-height: 29px;
+                margin-bottom: 26px;
+
+                @include respond-between(lg, xl) {
+                    font-size: 22px;
+                }
+                @include respond-between(xs, lg) {
+                    @include texts(19, 23)
+                }
+                @include respond-between(sm, md) {
+                  
+                }
+                @include respond-between(xs, sm) {
+                  
+                }
+                @include respond-below(xs) {
+                    @include texts(20, 24)
+                  
+                }
+                
+            }
+        }
+        &__user{
+            li.user{
+                a{
+                    color: $para-color;
+                    & i{
+                        margin-right: 8px;
+
+                    }
+                }
+            }
+            li.ratting{
+                margin-left: 15px;
+
+                i{
+                    color: $star-color;
+                }
+                span{
+                    color: $para-color;
+                    
+                }
+            }
+        }
+        .btn-part{
+            a{
+                
+            }
+        }
+    }
+}

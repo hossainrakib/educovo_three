@@ -1,0 +1,210 @@
+.blog-area{
+    .blog{
+        padding-bottom: 125px;
+
+        @include respond-between(md, lg) {
+  
+        }
+        @include respond-between(sm, md) {
+             padding-bottom: 95px;
+          
+        }
+        @include respond-between(xs, sm) {
+          
+        }
+        @include respond-below(xs) {
+            padding-bottom: 110px;
+          
+        }
+        &__single{
+            margin-right: 75px;
+            margin-bottom: 30px;
+            background-color: $white-color;
+
+            
+            @include respond-between(lg, xl) {
+               
+            }
+            @include respond-between(md, lg) {
+                margin-right: 45px;
+
+            }
+            @include respond-between(sm, md) {
+              
+            }
+            @include respond-between(xs, sm) {
+              
+            }
+            @include respond-below(md) {
+                margin-right: 0px;
+              
+            }
+            &:hover{
+                .blog__image{
+                    img{
+                       transform: scale(1.1);
+
+                    }
+                }
+            }
+        }
+        &__image{
+            overflow: hidden;
+            @include respond-between(lg, xl) {
+               margin: 23px 20px;
+            }
+            @include respond-between(md, lg) {
+                margin: 20px 0px;
+                
+             }
+            img{
+                @extend .transition-two;
+
+            }
+        }
+        &__content{
+            padding: 0 20px;
+
+            @include respond-below(xl) {
+                padding: 25px 20px;
+              
+            }
+        }
+        &__admin{
+
+        }
+        &__meta{
+            li{
+                color: $para-color;
+                margin-right: 20px;
+                i{
+
+                }
+            }
+        }
+        &__title{
+            h3{
+                @include fonts(24, 700, $teamplate-color, capitalize, 34px);
+                font-family: $second-font;
+                margin: 10px 0 15px;
+                @extend .transition;
+
+                @include respond-between(lg, xl) {
+                    @include texts(22, 30);
+                     margin: 10px 0 10px;
+
+                }
+                @include respond-between(md, lg) {
+                    @include texts(20, 27);
+  
+                }
+                @include respond-between(sm, md) {
+                  
+                }
+                @include respond-between(xs, sm) {
+                    @include texts(20, 24);
+                  
+                }
+                @include respond-below(xs) {
+                    @include texts(18, 24);
+                    margin: 5px 0 5px;
+                    
+                  
+                }
+                &:hover{
+                    color: $main-color;
+                }
+            }
+        }
+        .btn-part{
+            a{
+       
+            }
+        }
+   
+    }
+    .events-part{
+        padding: 30px;
+        margin-bottom: 30px;
+        background-color: $white-bg;
+
+        @include respond-between(md, lg) {
+            padding: 21px 25px;
+        }
+        @include respond-between(sm, md) {
+          
+        }
+        @include respond-below(xs) {
+             padding: 20px;
+                  
+        }
+
+        .date-part{
+            background-color: $light-bg;
+            min-width: 100px;
+            margin-right: 20px;
+            padding: 14px 0  22px;
+            @include respond-below(xs) {
+                margin-right: 0;
+            }
+            .month{
+                color: $para-color;
+            }
+            .date{
+                font-family: $second-font;
+                @include fonts(50, 700, $main-color, inherit, 26px);
+                margin-top: 12px;
+
+                @include respond-between(xs, sm) {
+                    @include texts(40, 24);
+                    margin-top: 5px;
+
+                }
+
+            }
+        }
+        .content-part{
+            @include respond-below(xs) {
+                  margin-top: 20px;
+                  text-align: center;
+            }
+            .categorie{
+                color: $para-color;
+
+                a{
+                    @extend .transition;
+                    color: $para-color;
+    
+                    &:hover{
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+        .categorie__title{
+            h3{
+                @include fonts(24, 700, $teamplate-color, capitalize, 36px);
+                font-family: $second-font;
+                @extend .transition;
+    
+                @include respond-between(md, lg) {
+                    @include texts(20, 28);
+                }
+                @include respond-between(sm, md) {
+                  
+                }
+                @include respond-between(xs, sm) {
+                    @include texts(20, 26);
+                  
+                }
+                @include respond-below(xs) {
+                    @include texts(18, 24);
+                  
+                }
+                &:hover{
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}

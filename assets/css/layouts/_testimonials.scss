@@ -1,0 +1,120 @@
+.testimonials-area{
+    .testimonials{
+        .slick-track{
+            @extend .gap-gutter;
+        }
+        .slick-list{
+            padding-bottom: 160px;
+
+            @include respond-between(md, lg) {
+                padding-bottom: 130px;
+  
+            }
+            @include respond-between(sm, md) {
+                padding-bottom: 100px;
+              
+            }
+            @include respond-between(xs, sm) {
+                padding-bottom: 90px;
+              
+            }
+            @include respond-below(xs) {
+                padding-bottom: 30px;
+              
+            }
+        }
+        .slick-dots{
+            display: flex;
+            justify-content: center;
+            li{
+                height: 10px;
+                width: 46px;
+                border-radius: 30px;
+                margin: 0 6px;
+                background-color: $main-color;
+
+                @include respond-between(sm, md) {
+                    @include area(40, 9)
+                  
+                }
+                @include respond-between(xs, sm) {
+                  @include area(35, 8)
+                }
+  
+
+                &.slick-active{
+                    background-color: $hover-bg;
+                }
+                button{
+                    display: none;
+                }
+            }
+        }
+        &__icon{
+            img{
+                height: 66px;
+                margin-bottom: 30px !important;
+
+                @include respond-between(xs, sm) {
+                    height: 55px;
+                  
+                }
+                @include respond-below(xs) {
+                    height: 45px;
+                    margin-bottom: 20px !important;
+                }
+            }
+        }
+        &__item{
+            background-color: $light-bg;
+            padding: 70px 55px 0px 55px;
+
+            @include respond-between(md, lg) {
+                padding: 60px 45px 0px 45px;
+  
+            }
+            @include respond-between(sm, md) {
+                padding: 50px 30px 0px 30px;
+              
+            }
+            @include respond-between(xs, sm) {
+                padding: 50px 45px 0px 45px;
+              
+            }
+            @include respond-below(xs) {
+                padding: 40px 15px 0px 15px;
+              
+            }
+            .author{
+                &__disc{
+                    p{
+                        @include fonts(23, 500, $para-color, initial, 33px);
+                        font-style: italic;
+                        padding-bottom: 100px;
+
+                        @include respond-between(sm, md) {
+                          @include texts(20, 27)
+                        }
+                        @include respond-between(xs, sm) {
+                            padding-bottom: 90px;
+                          
+                        }
+                        @include respond-below(xs) {
+                            @include texts(17, 24);
+                            padding-bottom: 60px;
+                          
+                        }
+                    }
+                }
+                &__profile{
+                    transform: translate(-50%, 50%);
+                    img{
+                        height: 70px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+        
+    }
+}

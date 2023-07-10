@@ -1,0 +1,356 @@
+//text-color
+$teamplate-color:#111111;
+$main-color:#21a7d0 ;
+$para-color:#505050;
+$star-color:#fcb903;
+$white-color:#fff;
+$border-color:#dfe9eb;
+
+//backgroutd-color
+
+$hot-bg:#e7f4f6;
+$dark-bg:#203154;
+$light-bg:#f3f8f9;
+$off-white-bg:#f9f8f8;
+$dark-hot-bg:#273c66;
+$white-bg:#fff;
+$nav-arrow-bg:#ddd;
+
+$hover-bg:#1e95ba;
+$apply-hover-bg:#2db4de;
+
+$btn-card-hover:#2e4778;
+$btn-card:#273c66;
+//shadow
+$border-nav: rgba(0, 0, 0, .20);
+//videos zoom effect
+$shadow: rgba(0, 0, 0, .20);
+$footer-border: rgba(255, 255, 255, .1);
+
+$videos-zoom:rgba(33, 167, 208, .3);
+$videos-zoom-two:rgba(33, 167, 208, .55);
+//section-padding
+
+.section-padding{
+    padding: 94px 0 70px 0;
+
+    @include respond-between(md, lg) {
+        
+    }
+    @include respond-between(sm, md) {
+       
+    }
+    @include respond-between(xs, sm) {
+         
+    }
+    @include respond-below(md) {
+        padding: 64px 0 40px 0;
+
+    }
+
+}
+.speace{
+    margin-top: 50px;
+
+    @include respond-between(md, lg) {
+        
+    }
+    @include respond-between(sm, md) {
+       
+    }
+    @include respond-between(xs, sm) {
+         
+    }
+    @include respond-below(md) {
+        margin-top: 30px;
+
+    }
+
+}
+.speace-t-70 {
+    padding-top: 70px;
+
+    @include respond-between(md, lg) {
+        padding-top: 50px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 40px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 30px;
+    }
+    @include respond-below(xs) {
+        padding-top: 26px;
+    }
+}
+.speace-b-70 {
+    padding-bottom: 60px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 50px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 30px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 26px;
+    }
+}
+.speace-t-60 {
+    padding-top: 60px;
+
+    @include respond-between(md, lg) {
+        padding-top: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+.speace-b-60 {
+    padding-bottom: 60px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 20px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 16px;
+    }
+}
+.speace-t-50 {
+    padding-top: 50px;
+
+    @include respond-between(md, lg) {
+        padding-top: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+
+.speace-b-50 {
+    padding-bottom: 50px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 20px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 16px;
+    }
+}
+
+.speace-t-40 {
+    padding-top: 40px;
+
+    @include respond-between(md, lg) {
+        padding-top: 30px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 25px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+.speace-t-30 {
+    padding-top: 30px;
+
+    @include respond-between(md, lg) {
+        padding-top: 25px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 20px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 18px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+.gap{
+    margin: 15px;
+
+    &-gutter{
+        margin: -15px;
+    }
+}
+//bg-size
+.bg-cover{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+}
+
+//html&body
+html, body{
+    height: 100%;
+    width: 100%;
+}
+//button
+.btn{
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.apply-btn{
+    text-transform: capitalize;
+    background-color:$main-color;
+    padding: 12px 35px;
+    color: $white-color;
+    @extend .transition;
+    &:hover{
+        background-color: $apply-hover-bg;
+        color: $white-color
+    }
+}
+.btn-card{
+    color: $white-color;
+    background-color: $btn-card;
+    padding: 5px 10px;
+
+    @extend .transition;
+    &:hover{
+        background-color: $btn-card-hover;
+        color: $white-color
+    }
+}
+.btn-style{
+    font-size: 16px;
+    color: $white-color;
+    background-color: $main-color;
+    text-transform: uppercase;
+    padding: 16px 58px;
+    border-radius: 30px;
+    font-weight: 700;
+    
+    @extend .transition;
+
+    @include respond-below(xs) {
+        padding: 10px 39px;
+  
+    }
+    
+    &:hover{
+        background-color: $hover-bg;
+        color: $white-color
+    }
+}
+.view-btn{
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 12px 40px;
+    border-radius: 30px;
+    border: 1px solid $main-color;
+    background-color: $light-bg;
+    color: $teamplate-color;
+    @extend .transition;
+
+    @include respond-below(sm) {
+        margin-top: 30px;
+    }
+    @include respond-below(xs) {
+        padding: 10px 30px;
+        font-size: 15px;
+    }
+    &:hover {
+        background-color: $main-color;
+        color: $white-color;
+    }
+}
+.btn-arrow{
+    width: 40px;
+    height: 40px;
+    border: 1px solid $main-color;
+    border-radius: 3px;
+    color: $teamplate-color;
+
+    &:hover {
+        color: $teamplate-color;
+    }
+}
+.btn-read{
+    font-weight: 500;
+    color: $teamplate-color;
+    @extend .transition;
+    position: relative;
+    &:before{
+        position: absolute;
+        content:"\f105";
+        font-family: 'FontAwesome';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        color: $teamplate-color;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -12%;
+        @extend .transition;
+
+    }
+    &:hover {
+        color: $main-color;
+        &:before{
+            right: -28%;
+            color: $main-color;
+
+        }
+    }
+}
+@mixin para-style {
+    @include texts(18, 30);
+    color: $para-color;
+}
+@mixin para-style-two {
+    @include texts(15, 26);
+    color: $para-color;
+    font-weight: 500; 
+}
+
+body{
+   @include font($main-font, 15, 400,);
+   line-height: 26px;
+   color: $teamplate-color;
+   text-transform: capitalize;
+    
+}
+
+.transition{
+    transition: all .3s ease;
+}
+.transition-two{
+    transition: all .4s ease;
+}

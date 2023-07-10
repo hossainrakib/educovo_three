@@ -1,0 +1,86 @@
+.categories-area{
+    background-color: $light-bg;
+    .categories{
+        &__item{
+            background-color: $white-bg;
+            padding: 30px;
+            border-radius: 5px;
+            border: 1px solid $border-color;
+            @extend .transition-two;
+
+            @include respond-below(lg) {
+                padding: 25px 20px;
+              
+            }
+
+            &:hover {
+                background-color: $main-color;
+                & .categories{
+                    &__icon{
+                        img{
+                            transform: scale(.9);
+                        }
+                    }
+                    &__title{
+                        h4{
+                            color: $white-color;
+                        }
+                    }
+
+                }
+                .courses-number{
+                    span{
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+        &__icon{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: $hot-bg;
+            margin-right: 20px;
+
+            img{
+                @extend .transition-two;
+
+            }
+        }
+        &__title{
+            h4{
+                @include font($second-font, 22, 700);
+                line-height: 24px;
+                @extend .transition-two;
+
+                @include respond-between(lg, xl) {
+                    font-size: 21px;
+                }
+                @include respond-between(md, lg) {
+                    
+  
+                }
+                @include respond-between(sm, md) {
+                  
+                }
+                @include respond-between(xs, sm) {
+                  
+                }
+                @include respond-below(lg) {
+                    font-size: 18px;
+                  
+                }
+                
+
+            }
+        }
+        .courses-number{
+            span{
+                @include para-style-two;
+                @extend .transition-two;
+
+            }
+        }
+
+    }
+}

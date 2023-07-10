@@ -1,0 +1,118 @@
+.about-area{
+    margin-top: -130px;
+    padding: 70px 0;
+
+    @include respond-between(sm, md) {
+      
+    }
+    @include respond-between(xs, sm) {
+      
+    }
+    @include respond-below(md) {
+      margin: 0;
+    }
+    
+    
+    
+    .about{
+        background-color: $hot-bg;
+        padding: 60px 60px 70px;
+        margin-right: 40px;
+
+        @include respond-between(md, lg) {
+  
+        }
+        @include respond-between(sm, md) {
+  
+        }
+        @include respond-between(xs, sm) {
+          
+        }
+        @include respond-below(md) {
+            margin-top: 70px;
+            margin-right: 0;
+        }
+        @include respond-below(md) {
+            padding: 40px 30px 50px;
+
+        }
+        
+        
+
+        &__disc{
+            p{
+                @include para-style;
+                margin: 22px 0 40px 0;
+                text-transform: initial;
+
+
+            }
+        }
+        &__author{
+            &__profile{
+                margin-right: 30px;
+                border-radius: 50%;
+                img{
+                    width: auto;
+                }
+            }
+            &__info{
+
+            }
+            &__sign{
+                img{
+                    width: auto;
+                    margin-bottom: 10px;
+                }
+            }
+            &__skils{
+                h5{
+                    @include para-style;
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+    .notice{
+        &-board__title{
+            h3{
+                @include fonts(20, 600, $white-color, uppercase, 24px);
+                background-color: $main-color;
+                font-family: $second-font;
+                padding: 18px 0;
+                margin-bottom: 10px;
+            }
+        }
+        &__wrap{
+
+        }
+        &__single{
+            background-color: $hot-bg;
+            padding: 20px 35px 20px 25px;
+            margin-bottom: 12px;
+        }
+        &__date{
+            h6{
+                font-family: $second-font;
+                @include fonts(22, 600, $main-color, uppercase, 26px);
+                padding-right: 10px;
+                margin-right: 10px;
+                border-right: 1px solid $main-color;
+                & span{
+                    font-size: 15px;
+                }
+            }
+
+        }
+        &__disc{
+            p{
+                @include para-style-two;
+
+                @include respond-between(md, lg) {
+                    line-height: 24px;
+                }
+            }
+        }
+
+    }
+}

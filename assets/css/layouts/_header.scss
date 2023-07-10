@@ -1,0 +1,507 @@
+.header-area{
+
+    .header-top{
+        background-color: $dark-bg;
+        .topbar{
+            &__content{
+                &__wrap{
+
+                    li{
+                        line-height: 50px;
+                        height: 50px;
+                        color: $white-color;
+                        margin-right: 20px !important;
+                        padding-right: 20px !important;
+
+                        @include respond-between(md, lg) {
+                            margin-right: 5px !important;
+                            padding: 0 !important;
+                            font-size: 13px;
+                        }
+                        @include respond-between(sm, md) {
+                          
+                        }
+                        @include respond-between(xs, sm) {
+                          
+                        }
+                        @include respond-below(xs) {
+                          
+                        }
+                        i{
+                            font-size: 16px;
+                            margin-right: 3px;
+                            color: $white-color;
+
+                            &::before{
+                                bottom: -3px;
+                                position: relative;
+                            }
+                        }
+                        
+                        a{
+                            color: $white-color;
+                            display: inline-block;
+                            @extend .transition;
+
+                            &:hover{
+                                color: $hover-bg;
+                            }
+                        }
+                    }
+                }
+            }
+            &__right{
+                .login-register{
+                    margin-right: 30px;
+                    i{
+                        margin-right: 10px;
+                        color: $main-color;
+                    }
+                    a{
+                        color: $white-color;
+                        @extend .transition;
+
+                        &:hover{
+                            color: $hover-bg;
+                        }
+                    }
+                    &:last-child a{
+
+                    }
+                }
+            }
+        }
+    }
+    .main-header{
+            background-color: $white-bg;
+
+        &.stacky{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-shadow: 0px 0px 4px $border-nav;
+            z-index: 9999999999;
+            .main-menu >{
+                ul{
+                    li{
+                        a.link{  
+                            transition: all .8s ease;
+                            line-height: 90px !important;
+                        }
+                    }
+                }
+            }
+            .expend-btn-inner > {
+                ul {
+                    li.shoping >{
+                        a{
+                            transition: all .8s ease;
+                            line-height: 90px;
+                        }
+                    }
+                }
+            }
+        }
+        .logo{
+            &__part{
+                img{
+                    max-height: 40px;
+                }
+            }
+        }
+        .main-menu > {
+            ul{
+                li.item{
+                    &:last-child{
+                        margin-right: 40px;
+
+                    }
+                    padding: 0 20px;
+                    position: relative;
+
+                    @include respond-between(md, lg) {
+                        padding: 0 16px;
+  
+                    }
+                    @include respond-between(sm, md) {
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                      
+                    }
+                    @include respond-below(xs) {
+                      
+                    }
+                    
+                    a.link{
+                        @include fonts(15, 600, $teamplate-color, uppercase, 120px);
+                        position: relative;
+                        padding-right: 18px;
+                        @extend .transition;
+
+                        @include respond-between(md, lg) {
+                            font-size: 14px;
+                        }
+                        @include respond-between(sm, md) {
+                          
+                        }
+                        @include respond-between(xs, sm) {
+                          
+                        }
+                        @include respond-below(xs) {
+                          
+                        }
+                        &:before{
+                            position: absolute;
+                            content: '+';
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: 0;
+
+                        }
+                        &:after{
+                            position: absolute;
+                            content: '-';
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: 0;
+                            display: none;
+                        }
+                    }
+                    &.active {
+                        > a{
+                            color: $main-color;
+                        }
+                    }
+                    &:hover > {
+                        & a{
+                            color: $main-color;
+
+                            &::after{
+                                display: block;
+                            }
+                            &::before{
+                                display: none;
+                            }
+                        }
+                    }
+                    .sub-menu{
+                        background-color: $white-bg;
+                        padding: 15px 0;
+                        box-shadow: 0 0 20px $shadow;
+                        min-width: 300px;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        transform: scaleY(0);
+                        transform-origin: top;
+                        visibility: hidden;
+                        pointer-events: none;
+                        @extend .transition;
+
+                        .item{
+                            padding: 10px 30px;
+                            text-align: left !important;
+
+                            .link{
+                                line-height: 26px !important;
+                                font-weight: 400;
+                                text-transform: capitalize;
+
+                                &::after, &::before{
+                                    content: '';
+                                }
+                            }
+                        }
+                    }
+                    .mega-menu{
+                        position: absolute;
+                        top: 100%;
+                        right: 0;
+                        transform: scaleY(0);
+                        transform-origin: top;
+                        visibility: hidden;
+                        pointer-events: none;
+                        box-shadow: 0 0 20px $shadow;
+                        background-color: $white-bg;
+
+                        @extend .transition;
+
+                        > .sub-menu{
+                            position: static;
+                            box-shadow: none;
+                            width: inherit;
+                            padding: 30px;
+                            text-align: left;
+                            min-width: 256px;
+                            .item{ 
+                                padding-right: 0;
+                                & .active{
+                                    color: $main-color;
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        & .sub-menu, .mega-menu{ 
+                            transform: scaleY(1);
+                            visibility: visible;
+                            pointer-events: visible;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .expend-btn-inner > {
+        ul{
+            li{
+                margin-right: 15px;
+
+                a{
+
+                    i{
+                        font-size: 16px;
+                        line-height: 26px;
+                        font-weight: 400;
+                        color: $teamplate-color;
+                        @extend .transition;
+                    }
+                }
+                &.shoping > {
+                    a{
+                        line-height: 120px;
+                        position: relative;
+                    }
+    
+                }
+                &:nth-child(3){
+
+                }
+                .nav-expend{
+                    
+                    span{
+                        height: 2px;
+                        width: 30px;
+                        background-color: $teamplate-color;
+                        margin: 6px 0px 6px 5px;
+                        display: block;
+                    }
+                }
+                &:hover > {
+                    & i {
+                        color: $main-color;
+                    }
+                }
+                &:hover{
+                    & .woocommarce-mini-card{
+                        top: 100% !important;
+                        visibility: visible;
+                        opacity: 1;
+                        pointer-events: visible;
+                    }
+                }
+            }
+        }
+    }
+    .woocommarce-mini-card{
+        background-color: $main-color;
+        padding: 30px 0px;
+        top: 250%;
+        right: 0;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: all .3s ease-in-out;
+        &__wrap{
+            width: 270px;
+            li{
+                margin-right: 0 !important;
+            }
+            .mini-card{
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                &__icon{
+                    a{
+                        
+                        height: 18px !important;
+                        width: 18px !important;
+                        border: 1px solid $white-color;
+                        border-radius: 50%;
+                        i{
+                            font-size: 12px !important;
+                            line-height: 16px !important;
+                            color: $white-color !important;
+                            @extend .transition;
+    
+                        }
+                        
+                        &:hover {
+                            i{
+                                color: $teamplate-color !important
+                            }
+                        }
+                    }
+                }
+                &__info{
+                    .card-title{
+                        margin-bottom: 0 !important;
+                        a{
+                            color: $white-color;
+                            font-weight: 700;
+                            @extend .transition;
+                            &:hover {
+                                 color: $dark-hot-bg;
+    
+                            }
+                        }
+                    }
+                    .single-price{
+                        span{
+                            color: $white-color;
+                            font-weight: 400;
+                        }
+                    }
+                }
+                &__image{
+                    max-width: 56px;
+                    img{
+    
+                    }
+                }
+    
+            }
+            .total-price{
+                margin-bottom: 20px;
+                a{
+                    color: $white-color;
+                }
+            }
+            .card-btn-liner{
+                a{
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+    .menu-toggle{
+        position: fixed;
+        top:0%;
+        right: -100%;
+        width: 500px;
+        padding: 30px 50px;
+        background: $white-bg;
+        transform-origin: right;
+        @extend .transition;
+        transform: scaleX(0);
+        overflow: auto;
+
+
+        &.active{
+            top: 0;
+            right: 0;
+            transform: scaleX(1);
+        }
+
+        
+        .close-btn-liner{
+            height: 40px;
+            width: 40px;
+            background-color: $main-color;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            .close-btn{
+                height: 20px;
+                width: 20px;
+                position: relative;
+                @extend .transition;
+
+                &::after, &::before{
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    height: 100%;
+                    width: 1px;
+                    background-color: $white-bg;
+                    transform: rotate(45deg);
+                }
+                &::after{
+                    transform: rotate(-45deg);
+
+                }
+            }
+            &:hover {
+                & .close-btn{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        .convas-logo{
+            height: 35px;
+            margin: 50px 0 30px 0;
+
+            img{
+                width: auto;
+            }
+        }
+        .convas-disc{
+            p{
+                color: $para-color;
+                line-height: 27px;
+            }
+        }
+        .convas-gallery{
+            margin: 25px 0 45px 0;
+            gap: 10px;
+            &__image{
+                height: 122px;
+                overflow: hidden;
+                img{
+                    @extend .transition;
+                }
+                &:hover img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .convas-contact{
+            margin-top: 50px;
+            .socile{
+                li{
+                    a{
+                        font-size: 18px;
+                        line-height: 18px;
+                        font-weight: 700 ;
+                        color: $teamplate-color;
+                        @extend .transition;
+
+                        &:hover{
+                            i{
+                            color: $main-color;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

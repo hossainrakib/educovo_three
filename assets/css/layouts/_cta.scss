@@ -1,0 +1,49 @@
+.cta-area{
+    background-color: $light-bg;
+    .cta{
+        &__image{
+            img{
+
+            }
+        }
+        &__content{
+            padding-left: 110px;
+            max-width: 700px;
+            padding-right: 15px;
+
+            @include respond-between(md, lg) {
+                padding: 10px 10px 10px 30px;
+                max-width: 714px;
+
+            }
+            @include respond-between(sm, md) {
+            }
+            @include respond-between(xs, sm) {
+              
+            }
+            @include respond-below(md) {
+                padding: 20px 15px;
+              
+            }
+            
+        }
+        &__title{
+            h2{
+
+            }
+        }
+        &__disc{
+            p{
+                @include para-style-two;
+                font-weight: 400;
+                text-transform: initial;
+                margin: 26px 0 40px 0;
+            }
+        }
+        &__btn{
+            a{
+
+            }
+        }
+    }
+}

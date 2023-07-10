@@ -1,0 +1,139 @@
+.expert-area{
+    background-color: $light-bg;
+
+    .expert{
+
+        .slick-list{
+            @extend .gap-gutter;
+
+        }
+        .slick-arrow{
+            border: none;
+            background-color: transparent;
+            position: absolute;
+            top: -60px;
+            right: 0px;
+
+            &.slick-prev{
+                right: 20px !important;
+
+                &::after {
+                    position: relative;
+                    content: '/';
+                    font-size: 20px;
+                    color: $teamplate-color;
+                    padding: 0 5px;
+                    top: -2px;
+
+                }
+            }
+            i{
+            color: $teamplate-color !important;
+            @include texts(20, 15);
+            }
+            &:hover {
+                color: $main-color;
+            }
+        }
+        &__image{
+            img{
+
+            }
+        }
+
+        &__action{
+            width: calc(100% - 60px);
+            height: calc(100% - 60px);
+            left: 50%;
+            bottom: 0%;
+            transform: translate(-50%, 0%) scale(0);
+            opacity: 0;
+            transform-origin: bottom;
+
+            @extend .transition;
+
+            &::after{
+                position:absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $main-color;
+                z-index: -1;
+                
+            }
+        }
+        &__content{
+            &:hover {
+                & .expert__action{
+                    transform: translate(-50%, 50%) scale(1);
+                    opacity: 1;
+                    bottom: 50%;
+
+                    &::after{
+                        opacity: .9;
+                        
+                    }
+
+                }
+
+
+            }
+        }
+        .author{
+            &__name{
+                h2{
+                    @include fonts(22, 700, $white-color, capitalize, 26px);
+                    font-family: $second-font;
+                    cursor: pointer;
+
+                    @extend .transition;
+
+                    @include respond-between(md, lg) {
+  
+                    }
+                    @include respond-between(sm, md) {
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                      @include texts(18,22)
+                    }
+                    @include respond-below(xs) {
+                      
+                    }
+                    
+
+                    &:hover{
+                        color: $teamplate-color;
+                    }
+                }
+            }
+            &__disignation{
+                h4{
+                    color: $white-color;
+                    margin: 8px 0 16px 0;
+                    font-size: 15px;
+                }
+            }
+            &__social-link{
+                ul{
+                    li{
+                        a{
+                            color: $white-color;
+                            font-size: 15px;
+                            margin: 0 17px;
+                            @extend .transition;
+
+                            &:hover{
+                                color: $teamplate-color;
+                            }
+                        }
+                    }
+                }
+            }
+  
+        }
+
+    }
+}

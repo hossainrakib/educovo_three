@@ -1,0 +1,80 @@
+.home-area{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .home{
+        padding: 125px 0 425px;
+
+        @include respond-between(md, lg) {
+  
+        }
+        @include respond-between(sm, md) {
+          
+        }
+        @include respond-between(xs, sm) {
+          
+        }
+        @include respond-below(xs) {
+             padding: 80px 0 200px;
+          
+        }
+        
+        
+        
+        &__title{
+            h2{
+                @include fonts(55, 700, $teamplate-color, capitalize, 66px);
+                font-family: $second-font;
+
+                @include respond-between(md, lg) {
+  
+                }
+                @include respond-between(sm, md) {
+                    @include texts(40, 40);
+                  
+                }
+                @include respond-between(xs, sm) {
+                    @include texts(35, 42);
+                  
+                }
+                @include respond-below(xs) {
+                    @include texts(20, 30);
+                  
+                }
+                
+                
+                
+            }
+        }
+        &__disc{
+            p{
+                @include texts(20, 30);
+                margin: 15px 0 35px 0;
+                color: $para-color;
+                text-transform: initial !important;
+
+                @include respond-between(md, lg) {
+  
+                }
+                @include respond-between(sm, md) {
+                
+                  
+                }
+                @include respond-between(xs, sm) {
+                  padding: 0 5px;
+                }
+                @include respond-below(xs) {
+                     @include texts(15, 22);
+                  
+                }
+                
+                
+                
+                
+            }
+        }
+        &__btn{
+
+        }
+    }
+}
